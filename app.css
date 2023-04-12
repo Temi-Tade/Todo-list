@@ -28,7 +28,8 @@ header{
   width: 320px;
   height: 45px;
   border: 1.5px solid #AFAFB0;
-  padding: 6px
+  padding: 6px;
+  background: transparent;
 }
 
 .todo-input{
@@ -137,22 +138,22 @@ ul span{
   display: inline-flex
 }
 
-.pop-up-bg{
-  background: #33333399;
+#pop-up-bg{
+  background: #3339;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   display: none;
-  padding-top: 200px
+  z-index: 2;
 }
 
-.pop-up{
+#pop-up{
   background: #fff;
-  width: 300px;
-  padding: 7px;
+  width: 20rem;
+  padding: .5rem;
   margin: auto;
   border-radius: 5px;
-  position: absolute;
+  transform: translateY(80vh);
 }
