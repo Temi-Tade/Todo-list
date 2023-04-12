@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="./app.css">
+</head>
+
+<body>
+  <main>
+    <header>
+      <h1>Todo App</h1>
+    </header>
+    
+    <div id="container-body">
+      <form id="todo-form" autocomplete="off">
+        <div class="todo-input">
+          <input type="text" id="task" placeholder="Add task...">
+          <button type="submit" id="submit">add</button>
+        </div>
+      </form>
+      
+      <div class="added-tasks">
+        <div style="text-align: center; margin-top: 15px" id="num"></div>
+        <div id="tasklist"></div>
+      </div>
+      
+      <div id="pop-up-bg">
+      	<div id="pop-up"></div>
+      </div>
+      
+      <button id="addbtn">&plus;</button>
+      
+      <div class="message"></div>
+      
+    </div>
+  </main>
+
+</body>
+<script defer async src="./app.js"></script>
+</html>

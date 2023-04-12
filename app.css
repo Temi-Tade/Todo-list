@@ -1,0 +1,158 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ :root{
+  --bgcolor: #4D5BFF;
+  --color: #F3F4FF
+}
+
+html{
+	background: var(--color)
+}
+
+header{
+  background: var(--bgcolor);
+  color: var(--color);
+  padding: .5rem;
+}
+
+#container-body{
+  padding: 7px 0;
+  border: 1px solid
+}
+
+#container-body input[type=text]{
+  width: 320px;
+  height: 45px;
+  border: 1.5px solid #AFAFB0;
+  padding: 6px
+}
+
+.todo-input{
+  display: flex;
+  justify-content: center;
+  align-content: center
+}
+
+#submit{
+  text-transform: uppercase;
+  color: var(--color);
+  background: #333;
+  border: none;
+  display: inline-block;
+  height: 45px;
+  width: 70px;
+  margin-left: -5px;
+  font-weight: 500;
+}
+
+#date{
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #333
+}
+
+label{
+  display: block;
+  padding: 7px;
+  width: 200px;
+  margin: 4px
+}
+
+input:focus,button:focus{
+  outline: none;
+}
+
+#addbtn{
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	width: 50px;
+	height: 50px;
+	border: 0;
+	border-radius: 50%;
+	font-size: 2rem;
+	padding: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--bgcolor);
+	color: var(--color);
+}
+
+form{
+  width: 100%;
+  margin: auto;
+}
+
+.message{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  max-height: 100px;
+  height: 50px;
+  transition: max-height 1s linear;
+  line-height: 50px;
+  vertical-align: middle
+}
+
+.delete{
+  color: red;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-align: center
+}
+
+#tasklist{
+  width: 400px;
+  padding: 4px;
+  margin: auto;
+  margin-top: 5px;
+  list-style: none
+}
+
+#tasklist p{
+  padding: 6px;
+  padding-right: 10px;
+  border-bottom: 0.5px solid
+}
+
+p .del{
+  float: right;
+  color: red;
+  font-weight: 350;
+  font-style: italic
+}
+
+.completed{
+  background: #FFD36B;
+  text-decoration: line-through;
+}
+
+ul span{
+  display: inline-flex
+}
+
+.pop-up-bg{
+  background: #33333399;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  padding-top: 200px
+}
+
+.pop-up{
+  background: #fff;
+  width: 300px;
+  padding: 7px;
+  margin: auto;
+  border-radius: 5px;
+  position: absolute;
+}
