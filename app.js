@@ -29,9 +29,11 @@ document.querySelector('#addbtn').addEventListener('click', () => {
 	popUpMessage(`
 	<h3>Add a task</h3>
 	<form id="todo-form" autocomplete="off">
-		<div class="todo-input">
-	    	<input type="text" id="task" placeholder="Add a task..." autofocus>
-	    	<button type="submit" id="submit">add</button>
+	    <input type="text" id="task" placeholder="Add a task..." autofocus>
+	    
+	    <div id='actions'>
+	    	<button class='button' type="submit" id="closebtn">cancel</button>
+	    	<button class='button' type='button' id="submit">add</button>
 	    </div>
 	</form>
 	`)
