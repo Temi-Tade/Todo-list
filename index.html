@@ -1,35 +1,31 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Todo App</title>
-    <link rel="stylesheet" href="./app.css">
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<link rel="stylesheet" href="./assets/style/app.css">
+	<title>Todo App</title>
 </head>
-
+	
 <body>
-  <main>
-    <header>
-      <h1>Todo App</h1>
-    </header>
-    
-    <div id="container-body">
-      <div class="added-tasks">
-        <div style="text-align: center; margin-top: 15px" id="num"></div>
-        <div id="tasklist"></div>
-      </div>
+	<main>
+		<header>
+			<h1>Todo App</h1>
+    	</header>
+    	
+    	<div id="container">
+    		<div class="added-tasks">
+        	<ul id="tasklist"></ul>
+    	</div>
       
-      <div id="pop-up-bg">
-      	<div id="pop-up"></div>
-      </div>
+    	<div id="pop-up-bg">
+    		<div id="pop-up"></div>
+    	</div>
       
-      <button id="addbtn">&plus;</button>
+    	<button id="addbtn">&plus;</button>
+	</main>
 
-      <div class="message"></div>
-    </div>
-  </main>
-
+  <script defer async src="./assets/js/app.js"></script>
 </body>
-<script defer async src="./app.js"></script>
 </html>

@@ -1,0 +1,139 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  letter-spacing: .5px;
+  font-weight: 400;
+}
+
+ :root{
+  --bgcolor: #4D5BFF;
+  --color: #F3F4FF;
+  --brad: 1.25rem;
+  --font-small: 1rem;
+  --font-med: 1.25rem;
+  --font-large: 1.5rem
+}
+
+html{
+	background: var(--color);
+	font-size: var(--font-med);
+}
+
+header h1{
+  background: var(--bgcolor);
+  color: var(--color);
+  padding: .5rem;
+  
+}
+
+#container{
+  padding: .5rem;
+  height: 100%;
+}
+
+*:focus{
+  outline: none;
+}
+
+button{
+	border: 0;
+	background: transparent;
+}
+
+#addbtn{
+	position: fixed;
+	bottom: 2rem;
+	right: 2rem;
+	width: 3.5rem;
+	height: 3.5rem;
+	border-radius: 50%;
+	font-size: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: .5rem;
+	background: var(--bgcolor);
+	color: var(--color);
+}
+
+form .todo-input {
+	display: flex;
+	justify-content: space-between;
+	align-content: center;
+	margin: auto;
+	padding: .5rem;
+}
+
+form .todo-input:last-child{
+	justify-content: end;
+}
+
+form{
+	width: 100%;
+	margin: auto;
+	padding: .75rem;
+	position: relative;
+}
+
+form h3{
+	text-align: center;
+	text-transform: uppercase
+}
+
+form input{
+	padding: .5rem;
+	border: 0;
+	border-bottom: 2px solid var(--bgcolor);
+	font-size: 1rem;
+	display: block;
+	width: 100%;
+	margin: auto;
+	position: relative
+}
+
+input[type=date]{
+	border-radius: var(--brad);
+}
+
+#tasklist{
+  padding: .5rem;
+  margin: auto;
+  list-style: none
+}
+
+#submit{
+  text-transform: uppercase;
+  background-color: var(--bgcolor);
+  border: none;
+  display: block;
+  padding: .5rem;
+  width: 7.5rem;
+  color: var(--color);
+  font-size: var(--font-med);
+  border-radius: var(--brad);
+}
+
+#submit:disabled{
+	background: #777;
+}
+
+#pop-up-bg{
+  background: #3339;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  padding-top: 15rem;
+  z-index: 10;
+}
+
+#pop-up{
+  background: #fff;
+  width: 18rem;
+  padding: .5rem;
+  margin: auto;
+  border-radius: .5rem;
+}
