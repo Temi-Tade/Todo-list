@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" href="./assets/style/app.css">
-	<title>Todo App</title>
-</head>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/fontawesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu">
+	<title>To-Do | Manage Your Tasks</title>
+</head> 
 	
 <body>
 	<main>
 		<header>
-			<h1>Todo App</h1>
+			<h1>To-Do</h1>
+			<div id="info-wrap">
+				<button class="fas fa-info" type="submit"></button>
+			</div>
     	</header>
     	
     	<div id="container">
-    		<div class="added-tasks">
         	<ul id="tasklist"></ul>
     	</div>
       
@@ -23,9 +28,10 @@
     		<div id="pop-up"></div>
     	</div>
       
-    	<button id="addbtn">&plus;</button>
+    	<button id="addbtn" class="fas fa-plus"></button>
 	</main>
-
-  <script defer async src="./assets/js/app.js"></script>
+	
+	<script defer async src="./assets/js/storage.js"></script>
+	<script defer async src="./assets/js/app.js"></script>
 </body>
 </html>

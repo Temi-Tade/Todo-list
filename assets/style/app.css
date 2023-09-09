@@ -4,6 +4,7 @@
   padding: 0;
   letter-spacing: .5px;
   font-weight: 400;
+  font-family: "Ubuntu", sans-serif
 }
 
  :root{
@@ -18,22 +19,48 @@
 html{
 	background: var(--color);
 	font-size: var(--font-med);
+	accent-color: var(--bgcolor);
+	scroll-behavior: smooth;
+	user-select: none;
+	font-family: "Ubuntu", sans-serif
 }
 
-header h1{
+header{
   background: var(--bgcolor);
   color: var(--color);
-  padding: .5rem;
-  
+  padding: .5rem .75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
+header #info-wrap{
+	width: 2rem;
+	height: 2rem;
+	border: 1.5px solid var(--color);
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#info-wrap button{
+	color: var(--color);
+	font-size: var(--font-small)
+}
+
+
 #container{
-  padding: .5rem;
-  height: 100%;
+  padding: 1rem;
 }
 
 *:focus{
   outline: none;
+}
+
+body{
+	font-family: "Ubuntu", sans-serif;
+	overscroll-behavior-y: none
 }
 
 button{
@@ -48,7 +75,7 @@ button{
 	width: 3.5rem;
 	height: 3.5rem;
 	border-radius: 50%;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -62,7 +89,7 @@ form .todo-input {
 	justify-content: space-between;
 	align-content: center;
 	margin: auto;
-	padding: .5rem;
+	padding: .125rem;
 }
 
 form .todo-input:last-child{
@@ -72,34 +99,53 @@ form .todo-input:last-child{
 form{
 	width: 100%;
 	margin: auto;
-	padding: .75rem;
+	padding: .25rem;
 	position: relative;
 }
 
-form h3{
+#pop-up h3{
 	text-align: center;
 	text-transform: uppercase
 }
 
 form input{
-	padding: .5rem;
+	padding: .75rem .5rem;
 	border: 0;
-	border-bottom: 2px solid var(--bgcolor);
 	font-size: 1rem;
 	display: block;
 	width: 100%;
 	margin: auto;
-	position: relative
+	position: relative;
+	background: #CCC7;
+	border-radius: .25rem;
+	transition: .5s
 }
 
-input[type=date]{
-	border-radius: var(--brad);
+form input:focus{
+	border-bottom: 2px solid var(--bgcolor);
 }
 
 #tasklist{
   padding: .5rem;
   margin: auto;
-  list-style: none
+  list-style: none;
+}
+
+#tasklist li input{
+	display: inline-block;
+	border-radius: 50%;
+	margin: 0 .75rem 0 0;
+	accent-color: #CCC7;
+}
+
+#tasklist li{
+	margin: .5rem 0;
+	padding: 1rem .5rem;
+	display: flex;
+	align-items: center;
+	background: #CCC7;
+	color: #333;
+	border-radius: .25rem
 }
 
 #submit{
@@ -112,10 +158,12 @@ input[type=date]{
   color: var(--color);
   font-size: var(--font-med);
   border-radius: var(--brad);
+  transition: .5s
 }
 
 #submit:disabled{
-	background: #777;
+	background: #CCC7;
+	color: #333;
 }
 
 #pop-up-bg{
@@ -126,14 +174,59 @@ input[type=date]{
   right: 0;
   bottom: 0;
   display: none;
-  padding-top: 15rem;
   z-index: 10;
 }
 
 #pop-up{
   background: #fff;
-  width: 18rem;
   padding: .5rem;
   margin: auto;
-  border-radius: .5rem;
+  border-radius: 1rem 1rem 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+input:checked + p{
+	text-decoration: line-through;
+	text-decoration-color: #4447;
+	color: #4447;
+}
+
+table{
+	padding: .5rem;
+	padding-bottom: 0;
+}
+
+th, td{
+	width: 50%;
+	padding: .25rem;
+	text-align: left
+}
+
+td button{
+	border-top: 1px inset #555;
+	display: block;
+	width: 100%;
+	font-size: 2rem;
+	padding: .5rem;
+}
+
+#no-todo{
+	text-align: center;
+	font-weight: 300;
+	line-height: 1.5rem;
+	padding: .5rem;
+}
+
+#no-todo::first-letter{
+	display: block;
+	font-size: 4rem;
+	color: var(--bgcolor);
+}
+
+#pop-up ul{
+	padding: 1rem;
+	line-height:2rem
 }
