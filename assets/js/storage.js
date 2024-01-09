@@ -3,14 +3,14 @@ const tasklist = document.querySelector('#tasklist')
 const setStorage = () => {
 	localStorage.setItem('tasks', JSON.stringify([]))
 }
-	
+
 const getStorage = () => {
 	return JSON.parse(localStorage.getItem('tasks'))
 }
 
 const getTasks = () => {
 	if (!getStorage() || getStorage().length === 0) {
-		tasklist.innerHTML = `<div id='no-todo' class='fas fa-check-circle'><br>No To-Dos! You're all set. Click on the <strong>&plus;</strong> button below to add a new To-Do</div>`
+		tasklist.innerHTML = `<div id='no-todo' class='fa-solid fa-check-circle'><br>No To-Dos! You are all set. Click on the <strong>&plus;</strong> button below to add a new To-Do</div>`
 	} else {
 		tasklist.innerHTML = ''
 		getStorage().forEach((val, ind) => {
@@ -32,8 +32,8 @@ const getTasks = () => {
 		})
 
 		tasklist.querySelectorAll('li').forEach((val, ind) => {
-			val.onclick = () => {
-				if (event.target === tasklist.querySelectorAll('input')[ind]) {
+			val.onclick = (e) => {
+				if (e.target === tasklist.querySelectorAll('input')[ind]) {
 						//doNothing
 				} else {
 					createTodoForm()
@@ -84,7 +84,7 @@ const getTasks = () => {
 						</tr>
 						
 						<tr>
-							<td colspan='2'><button class='fas fa-trash' id='delbtn'></button></td>
+							<td colspan='2'><button class='fas fa-trash' id='delbtn' title='Delete To-Do'></button></td>
 						</tr>
 					</table>
 				`)
@@ -117,3 +117,5 @@ const updateStorage = (x) => {
 }
 
 getTasks()
+
+//notify

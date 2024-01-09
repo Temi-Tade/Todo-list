@@ -39,8 +39,8 @@ const createpopUp = (body) => {
 	})
 	mod.innerHTML = body
 	
-	window.onclick = () => {
-		if (event.target === modbg) {
+	window.onclick = (e) => {
+		if (e.target === modbg) {
 			modbg.style.display = 'none'
 		}
 	}
@@ -80,8 +80,8 @@ const createTodoForm = () => {
 		}
 	}
 	
-	form.onsubmit = () => {
-		event.preventDefault()
+	form.onsubmit = (e) => {
+		e.preventDefault()
 		let task = new Todo(input.value.trim(), 'pending')
 		updateStorage(task)
 		getTasks()

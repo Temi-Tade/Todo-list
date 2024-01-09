@@ -46,7 +46,10 @@ header #info-wrap{
 
 #info-wrap button{
 	color: var(--color);
-	font-size: var(--font-small)
+	font-size: var(--font-small);
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }
 
 
@@ -66,6 +69,7 @@ body{
 button{
 	border: 0;
 	background: transparent;
+	cursor: pointer;
 }
 
 #addbtn{
@@ -129,6 +133,7 @@ form input:focus{
   padding: .5rem;
   margin: auto;
   list-style: none;
+  text-align: center;
 }
 
 #tasklist li input{
@@ -202,15 +207,17 @@ table{
 th, td{
 	width: 50%;
 	padding: .25rem;
-	text-align: left
+	text-align: center
 }
 
 td button{
-	border-top: 1px inset #555;
 	display: block;
 	width: 100%;
 	font-size: 2rem;
 	padding: .5rem;
+	background-color: #d61c2c;
+	color: var(--color);
+	border-radius: 2rem;
 }
 
 #no-todo{
