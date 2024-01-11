@@ -141,6 +141,7 @@ form input:focus{
 	border-radius: 50%;
 	margin: 0 .75rem 0 0;
 	accent-color: #CCC7;
+	cursor: pointer;
 }
 
 #tasklist li{
@@ -150,7 +151,8 @@ form input:focus{
 	align-items: center;
 	background: #CCC7;
 	color: #333;
-	border-radius: .25rem
+	border-radius: .25rem;
+	cursor: pointer;
 }
 
 #submit{
@@ -207,7 +209,7 @@ table{
 th, td{
 	width: 50%;
 	padding: .25rem;
-	text-align: center
+	text-align: center;
 }
 
 td button{

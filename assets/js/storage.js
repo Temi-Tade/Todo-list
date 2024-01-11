@@ -16,15 +16,15 @@ const getTasks = () => {
 		getStorage().forEach((val, ind) => {
 			if (val.status === 'completed') {
 				tasklist.innerHTML += `
-					<li>
-						<input type='checkbox' checked>
+					<li title='Left Click: Edit To-Do\n\nRight click: View To-Do info'>
+						<input type='checkbox' checked title='Mark as done/undone'>
 						<p>${val.name}</p>
 					</li>
 				`
 			}else{
 				tasklist.innerHTML += `
-					<li>
-						<input type='checkbox'>
+					<li title='Left Click: Edit To-Do\n\nRight click: View To-Do info'>
+						<input type='checkbox' title='Mark as done/undone'>
 						<p>${val.name}</p>
 					</li>
 				`
@@ -59,10 +59,10 @@ const getTasks = () => {
 				let taskArr = getStorage()
 				switch (val.checked) {
 					case true:
-						taskArr[ind].status = 'completed'
+						taskArr[ind].status = 'Completed'
 						break;
 					case false:
-						taskArr[ind].status = 'pending'
+						taskArr[ind].status = 'Pending'
 						break;
 				}
 				localStorage.setItem('tasks', JSON.stringify(taskArr))
