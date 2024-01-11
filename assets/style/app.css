@@ -227,6 +227,7 @@ td button{
 	font-weight: 300;
 	line-height: 1.5rem;
 	padding: .5rem;
+	margin: auto;
 }
 
 #no-todo::first-letter{
