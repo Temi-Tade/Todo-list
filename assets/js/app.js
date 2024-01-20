@@ -8,20 +8,20 @@ const mod = document.querySelector("#pop-up")
 class Todo{
 	constructor(name, status){
 		this.name = name;
-		this.status = 'pending';
+		this.status = 'Pending';
     //time
     }
     
     updateStatus = (bool) => {
     	if (bool) {
-    		this.status = 'completed'
+    		this.status = 'Completed'
     	}else{
-    		this.status = 'pending'
+    		this.status = 'Pending'
     	}
     }
     
     isCompleted = () => {
-    	if (this.status === 'completed') {
+    	if (this.status === 'Completed') {
     		return true
     	}else{
     		return false

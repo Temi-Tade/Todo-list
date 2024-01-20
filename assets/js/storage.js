@@ -14,7 +14,7 @@ const getTasks = () => {
 	} else {
 		tasklist.innerHTML = ''
 		getStorage().forEach((val, ind) => {
-			if (val.status === 'completed') {
+			if (val.status === 'Completed') {
 				tasklist.innerHTML += `
 					<li title='Left Click: Edit To-Do\n\nRight click: View To-Do info'>
 						<input type='checkbox' checked title='Mark as done/undone'>
