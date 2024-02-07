@@ -7,7 +7,7 @@
   "description": "A Web based To-Do list app.",
   "icons": [
     {
-      "src": "images/touch/homescreen48.png",
+      "src": "/assets/images/icon.png",
       "sizes": "48x48",
       "type": "/assets/images/icon.png"
     },
@@ -37,4 +37,4 @@
       "type": "image/png"
     }
   ]
-} Ann 
+}
