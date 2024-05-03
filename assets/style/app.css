@@ -8,7 +8,8 @@
 }
 
  :root{
-  --bgcolor: #4D5BFF;
+  --lightbg: #4D5BFF;
+  --darkbg: #444;
   --color: #F3F4FF;
   --brad: 1.25rem;
   --font-small: 1rem;
@@ -16,17 +17,71 @@
   --font-large: 1.5rem
 }
 
-html{
-	background: var(--color);
-	font-size: var(--font-med);
-	accent-color: var(--bgcolor);
-	scroll-behavior: smooth;
-	user-select: none;
-	font-family: "Ubuntu", sans-serif
+/*media queries for theme*/
+@media (prefers-color-scheme: dark) {
+	html {
+		background: var(--darkbg);
+		color: #fff;
+		font-size: var(--font-med);
+		accent-color: var(--lightbg);
+		scroll-behavior: smooth;
+		user-select: none;
+		font-family: "Ubuntu", sans-serif
+	}
+	
+	#pop-up {
+		background: var(--darkbg);
+		padding: .5rem;
+		margin: auto;
+		border-radius: 1rem 1rem 0 0;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	form input{
+		color: #fff;
+	}
+	
+	::placeholder{
+		color: #fff;
+	}
+	
+	#tasklist li{
+		color: #fff;
+	}
+}
+
+/*media queries for theme*/
+@media (prefers-color-scheme: light) {
+	html {
+		background: var(--color);
+		font-size: var(--font-med);
+		accent-color: var(--lightbg);
+		scroll-behavior: smooth;
+		user-select: none;
+		font-family: "Ubuntu", sans-serif
+	}
+	
+	#pop-up {
+		background: #fff;
+		padding: .5rem;
+		margin: auto;
+		border-radius: 1rem 1rem 0 0;
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+	
+	#tasklist li{
+		color: #333;
+	}
 }
 
 header{
-  background: var(--bgcolor);
+  background: var(--lightbg);
   color: var(--color);
   padding: .5rem .75rem;
   display: flex;
@@ -84,7 +139,7 @@ button{
 	justify-content: center;
 	align-items: center;
 	padding: .5rem;
-	background: var(--bgcolor);
+	background: var(--lightbg);
 	color: var(--color);
 }
 
@@ -126,7 +181,7 @@ form input{
 }
 
 form input:focus{
-	border-bottom: 2px solid var(--bgcolor);
+	border-bottom: 2px solid var(--lightbg);
 }
 
 #tasklist{
@@ -150,14 +205,13 @@ form input:focus{
 	display: flex;
 	align-items: center;
 	background: #CCC7;
-	color: #333;
 	border-radius: .25rem;
 	cursor: pointer;
 }
 
 #submit{
   text-transform: uppercase;
-  background-color: var(--bgcolor);
+  background-color: var(--lightbg);
   border: none;
   display: block;
   padding: .5rem;
@@ -182,17 +236,6 @@ form input:focus{
   bottom: 0;
   display: none;
   z-index: 10;
-}
-
-#pop-up{
-  background: #fff;
-  padding: .5rem;
-  margin: auto;
-  border-radius: 1rem 1rem 0 0;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
 }
 
 input:checked + p{
@@ -233,7 +276,7 @@ td button{
 #no-todo::first-letter{
 	display: block;
 	font-size: 4rem;
-	color: var(--bgcolor);
+	color: var(--lightbg);
 }
 
 #pop-up ul{

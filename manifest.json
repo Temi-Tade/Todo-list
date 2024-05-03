@@ -7,7 +7,7 @@
   "description": "A Web based To-Do list app.",
   "icons": [
     {
-      "src": "/assets/images/icon.png",
+      "src": "images/touch/homescreen48.png",
       "sizes": "48x48",
       "type": "/assets/images/icon.png"
     },
